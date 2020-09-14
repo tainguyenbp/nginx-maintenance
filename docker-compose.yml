@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nginx_mode_maintenance:
+    build:
+      context: .
+    image: nginx-maintenance/tainn
+    container_name: nginx_mode_maintenance
+    ports:
+      - 80:8081

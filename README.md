@@ -10,5 +10,5 @@ Kubernetes build mode maintenance nginx
 * Usage<br>
 > git clone https://github.com/tainguyenbp/nginx-maintenance.git<br>
 > cd nginx-maintenance<br>
-> kubectl create -f deployment-definition.yaml
-> kubectl create -f service-definition.yaml
+> kubectl create -f deployment-definition.yaml<br>
+> kubectl create -f service-definition.yaml<br>

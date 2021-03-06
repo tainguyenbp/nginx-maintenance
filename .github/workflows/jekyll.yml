@@ -1,0 +1,21 @@
+name: build nginx maintenance website
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: self-hosted
+    steps:
+
+    - name: show hardisk 
+      run: df -h
+      
+    - name: download repo
+      run: git clone https://github.com/tainguyenbp/nginx-maintenance.git
+    
+    - name: build docker compose 
+      run: cd nginx-maintenance && docker-compose up -d

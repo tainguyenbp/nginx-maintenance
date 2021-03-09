@@ -20,6 +20,9 @@ jobs:
     - name: check path current local
       run: git clone https://github.com/tainguyenbp/nginx-maintenance.git
 
-    - name: build project nginx
+    - name: check path projec nginx
       run: ls -ahl
+      
+    - name: build project nginx
+      run: cd nginx-maintenance && docker-compose up
     

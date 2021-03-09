@@ -18,5 +18,8 @@ jobs:
       run: pwd
 
     - name: check path current local
-      run: git clone https://github.com/tainguyenbp/nginx-maintenance.git && ls -lah
+      run: git clone https://github.com/tainguyenbp/nginx-maintenance.git
+
+    - name: build project nginx
+      run: cd nginx-maintenance && dokcer-compose up
     

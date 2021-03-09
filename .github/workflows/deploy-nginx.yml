@@ -21,5 +21,5 @@ jobs:
       run: git clone https://github.com/tainguyenbp/nginx-maintenance.git
 
     - name: build project nginx
-      run: cd nginx-maintenance && dokcer-compose up
+      run: ls -ahl
     

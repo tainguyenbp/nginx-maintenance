@@ -6,4 +6,4 @@ services:
     image: nginx-maintenance/tainguyenbp
     container_name: nginx_mode_maintenance
     ports:
-      - 80:8081
+      - 8081:8081

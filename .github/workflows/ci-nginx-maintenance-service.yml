@@ -13,9 +13,6 @@ jobs:
     - name: Check path current local
       run: pwd
 
-    - name: Show path current directory
-      run: sudo echo $HOME
-
     - name: Delete container for maintenance old
       run: sudo docker rm -f nginx_mode_maintenance
       
@@ -23,7 +20,7 @@ jobs:
       run: rm -rf `pwd`/nginx-maintenance
       
     - name: Delete repo maintenance built
-      run: rm -rf $HOME/nginx-maintenance   
+      run: sudo rm -rf $HOME/nginx-maintenance   
 
     - name: Clone project maintenance
       run: git clone https://github.com/tainguyenbp/nginx-maintenance.git

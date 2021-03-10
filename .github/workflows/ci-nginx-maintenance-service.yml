@@ -15,9 +15,6 @@ jobs:
 
     - name: Delete container for maintenance old
       run: sudo docker rm -f nginx_mode_maintenance
-
-    - name: Delete repo maintenance old directory HOME
-      run: sudo rm -rf /home/nginx-maintenance
       
     - name: Delete repo maintenance clone
       run: rm -rf `pwd`/nginx-maintenance
@@ -29,7 +26,7 @@ jobs:
       run: ls -ahl
 
     - name: Copy repo clone to home directory
-      run: sudo scp -r nginx-maintenance /home/
+      run: sudo scp -r nginx-maintenance $HOME/
 
     - name: Check path projec maintenance copy
       run: ls -ahl
@@ -38,5 +35,5 @@ jobs:
       run: echo $HOME
       
     - name: build project maintenance new
-      run: sudo cd /home/nginx-maintenance  && sudo docker-compose up -d --build
+      run: cd $HOME/nginx-maintenance  && sudo docker-compose up -d --build
     

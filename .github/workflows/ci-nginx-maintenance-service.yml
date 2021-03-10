@@ -33,6 +33,9 @@ jobs:
 
     - name: Check path projec maintenance copy
       run: ls -ahl
+  
+    - name: Show path current directory
+      run: echo $HOME
       
     - name: build project maintenance new
       run: sudo cd /home/nginx-maintenance  && sudo docker-compose up -d --build

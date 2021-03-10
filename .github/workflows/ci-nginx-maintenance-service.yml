@@ -7,7 +7,7 @@ on:
 jobs:
 
   build:
-    name: Build
+    name: build project maintenance
     runs-on: self-hosted
     steps:
     - name: check path current local
@@ -16,14 +16,11 @@ jobs:
     - name: Delete container for maintenance old
       run: sudo docker rm -f nginx_mode_maintenance
 
-    - name: Delete repo maintenance old
-      run: sudo rm -rf nginx-maintenance
-
     - name: Delete repo maintenance old directory HOME
       run: sudo rm -rf /home/nginx-maintenance
       
-    - name: Delete repo maintenance old
-      run: sudo rm -rf nginx-maintenance
+    - name: Delete repo maintenance clone
+      run: rm -rf `pwd`/nginx-maintenance
 
     - name: Clone project maintenance
       run: git clone https://github.com/tainguyenbp/nginx-maintenance.git

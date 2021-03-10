@@ -10,7 +10,7 @@ jobs:
     name: build project maintenance
     runs-on: self-hosted
     steps:
-    - name: check path current local
+    - name: Check path current local
       run: pwd
 
     - name: Delete container for maintenance old
@@ -18,6 +18,9 @@ jobs:
       
     - name: Delete repo maintenance clone
       run: rm -rf `pwd`/nginx-maintenance
+      
+    - name: Delete repo maintenance built
+      run: rm -rf $HOME/nginx-maintenance   
 
     - name: Clone project maintenance
       run: git clone https://github.com/tainguyenbp/nginx-maintenance.git
@@ -29,7 +32,7 @@ jobs:
       run: sudo scp -r nginx-maintenance $HOME/
 
     - name: Check path projec maintenance copy
-      run: ls -ahl
+      run: ls -lah
   
     - name: Show path current directory
       run: echo $HOME

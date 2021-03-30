@@ -10,8 +10,6 @@ jobs:
     name: build project maintenance
     runs-on: self-hosted
     steps:
-    - name: Check path current local
-      run: pwd
 
     - name: Delete container for maintenance old
       run: sudo docker rm -f nginx_mode_maintenance
